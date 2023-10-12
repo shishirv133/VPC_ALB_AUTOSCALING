@@ -1,4 +1,4 @@
-# Create EIP for NAT GW1
+# Create Elastic IP for NAT GW1
 resource "aws_eip" "eip_natgw1" {
   count = "1"
 }
@@ -11,7 +11,7 @@ resource "aws_nat_gateway" "natgateway_1" {
   subnet_id     = aws_subnet.pub_sub1.id
 }
 
-# Create EIP for NAT GW2
+# Create Elastic IP for NAT GW2
 
 resource "aws_eip" "eip_natgw2" {
   count = "1"
