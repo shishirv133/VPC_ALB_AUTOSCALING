@@ -1,16 +1,10 @@
-# Configure Providers
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.52.0"
-    }
-  }
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+  access_key = "AKIAQ634VJ2DSUHAN23R" #aws configure
+  secret_key = "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"  ##aws configure
 }
 
-provider "aws" {
-  region = var.region
-}
 
 # Create remote state
 terraform {
